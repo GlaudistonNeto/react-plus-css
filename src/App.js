@@ -5,6 +5,7 @@ import MyComponents from './components/MyComponents';
 function App() {
   const n = 15;
   const [name] = useState('Ermanoteu');
+  const redTitle = false;
 
   return (
     <div className="App">
@@ -27,6 +28,10 @@ function App() {
         </h2>
         <h2 style={name === 'Ermanoteu' ? {color: 'pink'} : {color: null} }>
           Also Dynamic Css
+        </h2>
+        {/* dynamic class */}
+        <h2 className={redTitle ? "red-title" : "title"}>
+          This title will have dynamic class
         </h2>
     </div>
   );
